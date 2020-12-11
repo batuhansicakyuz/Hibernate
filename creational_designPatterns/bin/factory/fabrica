@@ -1,0 +1,14 @@
+Fabrika tasarım şablonu ne zaman kullanılır?
+Kullanıcı sınıf hangi altsınıfların kullanılması gerektiğini bilmiyorsa; Örneğin Test sınıfı Z4 ya
+da A4 model arabaları tanımıyor.
+Kullanıcı sınıf altsınıflardan nasıl nesne üretilmesi gerektiğini bilmiyorsa; Örneğin Test sınıfı
+Z4 model bir araba üretebilmek için Z4 sınıfının kontrüktörünün bir int değerine ihtiyaç
+duyduğunu bilmiyor.
+Kullanıcı sınıf ihtiyaç duyulan nesnelerin oluşturulmasını altsınıflara delege etmek istiyorsa;
+Örneğin Test sınıfı A4 ve R8 model Audi marka araba üretimini tamamen AudiFabrika
+sınıfına bırakıyor.
+
+
+BmwFabrika ve AudiFabrika içinde araba modellerinin nesnesini oluşturarak esnekliğimizi arttırdık. 
+Test classının içinde sadece fabrika nesnesi oluşturarak model nesnesi otomatik oluştuğu için bi daha
+oluşturmaya gerek kalmadı.

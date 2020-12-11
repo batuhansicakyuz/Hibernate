@@ -1,0 +1,23 @@
+
+
+Fabrika metodu tasarım şablonu ne zaman kullanılır?
+Kullanıcı sınıf hangi altsınıfların kullanılması gerektiğini bilmiyorsa; Örneğin Application
+sınıfı Pdf ya da Work döküman tiplerini tanımıyor.
+Kullanıcı sınıf altsınıflardan nasıl nesne üretilmesi gerektiğini bilmiyorsa.
+Kullanıcı sınıf ihtiyaç duyulan nesnelerin oluşturulmasını altsınıflara delege etmek istiyorsa.
+
+
+Bu metot bünyesinde nesne oluşturulur ve kullanıcı sınıfa verilir. Kullanıcı
+sınıfın nesnenin hangi sınıftan olduklarını bilme zorunluluğu yoktur. Bu şekilde kullanıcı sınıfları
+değiştirmek zorunda kalmadan, fabrika metodu bünyesindeki nesne oluşum süreci ve nesnenin veri
+tipi tayin edilebilir.
+
+****
+
+somut sınıflar oluşturarak Document Factory sayesinde 
+nesne oluşturup Pdf ve Word dosyalarını bilmemize gerek kalmadan 
+çalıştırabiliyoruz.
+DocumentFactory içinde Word ve Pdf nesnelerini yaratarak 
+Application da yaratmamıza gerek kalmıyor.
+Application sınıfı somut altsınıfların yapısını ve nasıl oluşturulduklarını bilmek
+zorunda değildir.

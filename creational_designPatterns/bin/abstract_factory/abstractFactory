@@ -1,0 +1,9 @@
+Soyut fabrika tasarım şablonu ne zaman kullanılır?
+Kullanıcı sınıf hangi altsınıfların kullanılması gerektiğini bilmiyorsa.
+Kullanıcı sınıf altsınıflardan nasıl nesne üretilmesi gerektiğini bilmiyorsa.
+Kullanıcı sınıf ihtiyaç duyulan nesnelerin oluşturulmasını altsınıflara delege etmek istiyorsa.
+Kullanıcı sınıf birden fazla nesne ailesi ile beraber çalışmak zorunda ise.
+
+
+en alt sınıfı bilmeden çağırıcaksak  "kırmızı elma" gibi
+nesnesini de oluşturmaya gerek kalmıyor.

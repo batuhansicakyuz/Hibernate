@@ -1,0 +1,58 @@
+Sınıf konstruktörlerinin private olması gerekiyor. Konstrüktörleri private olan bir sınıftan,
+başka bir sınıf new operatörü ile nesne oluşturamaz.
+Singleton sınıfından sadece bir tane nesne oluşturulması gerektiği için oluşturulması gereken
+nesneyi sınıfın static değiskeni olarak tanımlamamız gerekiyor. Koddaki örnekte private
+static Singleton instance = null; şeklinde bu tanımlamayı yapıyoruz.
+Singleton sınıfında instance() isminde static bir metodun olması ve bu metodun static olarak
+tanımlanmış nesneyi geri vermesi gerekiyor. instance() metodu içinde sınıfın tek nesnesi olacak
+değişken oluşturulur.
+Sınıf bünyesinde bulunan instance() static metodu büyük önem taşımaktadır.
+
+Tekillik tasarım şablonu ne zaman kullanılır?
+Sistem bünyesinde bir sınıftan sadece bir nesne oluşturulması bu nesnenin kullanılması gerektiği
+durumlarda singleton tasarım şablonu kullanılır.
+
+******
+
+bir örnek verecek olursak veritabanı bağlantı nesnesi oluşturulmasının da 
+tek sefer yapılması makul bir istektir. 
+Çünkü sadece bir kere oluşturulabilmeli ki, 
+veritabanı bağlantı bilgilerini sonradan yapılabilecek yanlış girdilere karşı koruyabilelim.
+
+Özetle temel mantık şudur; bir sınıftan sadece bir tane nesne yaratılır, 
+nesneye ihtiyaç duyulduğu anda önceden yaratılmış hali çağrılır. 
+Yani bir sınıftan sadece tek nesne oluşturulabilir!
+
+Sınıf diyagramını da yorumlayarak, bir singleton sınıfın taşıması gereken özellikleri maddeleyelim:
+
+1-) Sınıf yapıcı metotlarının private olması gerekiyor. 
+Yapıcı metotları private olan bir sınıftan, başka bir sınıf new operatörü ile nesne oluşturamaz!
+
+2-) Singleton sınıfından sadece bir tane nesne oluşturmak 
+ve bu nesnenin istenen yerde kullanılabilmesini sağlamak istiyoruz. 
+Bunun için static değişken olarak bir nesne tanımlamamız gerekiyor.
+
+3-)Singleton sınıfında instance() isminde bir static metot olması 
+ve bu metodun içinde static olarak tanımlanan nesneyi geri vermesi gerekiyor. 
+instance() metodu içinde, sınıfın tek nesnesi olacak değişken oluşturulur.
+
+Fakat bu noktada şöyle bir hatırlatma yaparak, koda iyileştirme yapacağız. Sınıf bünyesinde bulunan static instance() metodu büyük önem taşımaktadır. Amatörce yazılmış Singleton sınıflarında (yukarda yazdığımız kodda da bulunan) şu şekilde instance() metodu görülebilir:
+Java multi thread bir sistem olduğu için, yukardaki instance() metodunda new ile birden fazla nesne oluşturulabilir. Multi thread, bir programda aynı anda birden fazla işin yapılabilmesidir.
+
+Dolayısıyla instance = new Singleton() kısmı birden çok kez çalışabilir. Bu bir problemdir ve bizi Singleton Design Pattern’ in avantajından mahrum bırakan bir durumdur.
+
+Bu problemi çözmek için double checked locking yapısı kullanılmaktadır. Bu yapı, bir thread işlemdeyken, diğer thread’in o alana girmesine izin vermemektedir. 
+
+Singleton Tasarım Şablonu Ne Zaman Kullanılır?
+
+Sistem bünyesinde bir sınıftan sadece bir nesne üretilerek bu nesnenin 
+kullanılması gerektiği durumlarda singleton tasarım şablonu kullanılır.
+
+İlişkili tasarım şablonları:
+
+Abstract Factory, Builder ve Prototype tasarım şablonlarında olabileceği 
+gibi birçok tasarım şablonu Singleton tasarım şablonu kullanılarak implemente edilir.
+
+Singleton tasarım şablonunu uygulamak adına, tek bir nesne yaratma noktasında
+ farklı yöntemler de mevcut. Fakat ben en çok tercih edilen yöntemi anlatmaya çalıştım. 
+ Daha yararlı bir yazı haline getirmek için, yorum yapabilirsiniz.

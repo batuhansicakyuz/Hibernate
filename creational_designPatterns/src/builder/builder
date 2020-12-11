@@ -1,0 +1,16 @@
+yapıcı tasarım şablonunun karmaşık yapıdaki bir nesneyi değişik parçaları
+bir araya getirerek oluşturmasında
+
+değişik parçalar birleştirilir ve istenilen tipte nesne oluşturulur.
+
+Sipariş edilen her
+arabanın markası, modeli, rengi ve beygirgücü değişik olabileceğinden,
+Araba Model Marka
+Yapıcı tasarım
+şablonu bu işlemi sistemin diğer bölümlerinden bağımsız bir şekilde gerçekleştirmek için
+kullanılmaktadır.
+
+Yapıcı tasarım şablonu ne zaman kullanılır?
+Değişik parametreler kullanılarak karmaşık yapıda bir nesnenin oluşturulması gerektiğinde.
+Karmaşık yapıya sahip nesnenin oluşturulma sürecinin, sistemin diğer bölümlerinden bağımsız
+bir şekilde yapılması gerektiği durumlarda.

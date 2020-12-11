@@ -1,0 +1,8 @@
+Prototip tasarım şablonu ne zaman kullanılır?
+Bir sistem bünyesinde büyük ve oluşturulmaları zaman alıcı nesneler bulunduğu taktirde.
+Sistem bünyesinde kullanılan sınıf hirarşilerini küçültmek ve kullanılan sınıf adedinin
+azaltılması gerektiğinde.
+
+
+clone metodu sayesinde önceden oluşturduğumuz nesnenin aynısını oluşturarak üzerinde
+bi kaç değişiklik yaparak yeni bir nesne oluşturabiliyoruz.
